@@ -30,7 +30,7 @@ const HomeButton = ({ label = "Home" }: ButtonProps) => {
 const BackButton = ({ label = "Go back" }: ButtonProps) => {
   return (
     <button
-      className={`${buttonBaseClasses} text-gray-900 hover:bg-gray-300`}
+      className={`${buttonBaseClasses} text-white bg-gray-300 hover:bg-gray-500`}
       onClick={() => window.history.back()}
     >
       {label}
