@@ -5,11 +5,13 @@ import { useEffect, useCallback } from "react";
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
+  className?: string;
 }
 
 export default function Paginations({
   currentPage,
   totalPages,
+  className = "",
 }: PaginationProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -30,7 +32,9 @@ export default function Paginations({
   }, [currentPage, totalPages, handlePageChange]);
 
   return (
-    <div className="flex items-center gap-2 px-2 py-2 rounded bg-white">
+    <div
+      className={`flex items-center gap-2 px-2 py-2 rounded bg-white ${className}`}
+    >
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}

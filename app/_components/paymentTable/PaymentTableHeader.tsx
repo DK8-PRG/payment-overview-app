@@ -3,7 +3,7 @@ import { gridColsClass } from "../payments/types";
 export default function PaymentTableHeader() {
   return (
     <div
-      className={`${gridColsClass}  bg-gray-100  text-gray-600 uppercase text-sm font-semibold p-4 `}
+      className={`${gridColsClass} bg-gray-100 text-gray-600 uppercase text-sm font-semibold p-4 hidden sm:grid`}
     >
       <div>ID</div>
       <div>Day Payment</div>

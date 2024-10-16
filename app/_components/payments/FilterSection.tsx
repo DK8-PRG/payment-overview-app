@@ -4,13 +4,18 @@ import { Fragment } from "react";
 import { updateSearchParams } from "./utils";
 import { FilterSectionProps } from "./types";
 
+interface ExtendedFilterSectionProps extends FilterSectionProps {
+  className?: string;
+}
+
 export default function FilterSection({
   title,
   options,
   param,
   multiple = true,
   colors = {},
-}: FilterSectionProps) {
+  className = "",
+}: ExtendedFilterSectionProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -42,9 +47,9 @@ export default function FilterSection({
   const isAllSelected = selectedValues.length === 0; // Je-li nic nevybráno, je vybrán "All"
 
   return (
-    <div>
+    <div className={className}>
       {/* Tlačítko "All" */}
-      <div className="flex gap-1 px-2 py-2 rounded bg-white">
+      <div className="flex flex-wrap gap-1 px-2 py-2 rounded bg-white">
         <button
           onClick={handleAllClick}
           className={`px-2 py-1 rounded text-sm focus:outline-none focus:ring-0 ${

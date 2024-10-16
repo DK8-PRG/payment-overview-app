@@ -1,7 +1,11 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function Sort() {
+interface SortProps {
+  className?: string;
+}
+
+export default function Sort({ className = "" }: SortProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -15,10 +19,9 @@ export default function Sort() {
 
   return (
     <>
-      {/* <label htmlFor="sort" className="block font-semibold mb-2 text-sm">
-        Sort by
-      </label> */}
-      <div className="px-2 py-2 rounded bg-white">
+      <div
+        className={`flex px-2 py-2 rounded bg-white items-center  ${className}`}
+      >
         <select
           id="sort"
           onChange={(e) => handleSortChange(e.target.value)}

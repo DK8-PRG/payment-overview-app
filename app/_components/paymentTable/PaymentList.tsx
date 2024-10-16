@@ -4,9 +4,10 @@ import PaymentTableHeader from "./PaymentTableHeader";
 
 interface PaymentListProps {
   payments: Payment[];
+  className?: string;
 }
 
-export default function PaymentList({ payments }: PaymentListProps) {
+export default function PaymentList({ payments, className }: PaymentListProps) {
   if (!payments || payments.length === 0) {
     return (
       <p className="text-center text-gray-500 font-medium text-lg my-6">
@@ -16,7 +17,9 @@ export default function PaymentList({ payments }: PaymentListProps) {
   }
 
   return (
-    <div className="border border-gray-200 bg-gray-50 rounded-lg overflow-hidden">
+    <div
+      className={`border border-gray-200 bg-gray-50 rounded-lg overflow-hidden ${className}`}
+    >
       <div className="overflow-x-auto">
         <div className="min-w-full">
           <PaymentTableHeader />

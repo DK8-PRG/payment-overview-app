@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "A comprehensive dashboard for managing and reviewing your payment transactions.",
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,9 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gray-100">
         <Header />
-
-        <div className="flex-1 px-4 py-6 sm:px-8 sm:py-12 grid">
-          <main className="max-w-4xl mx-auto w-full">{children}</main>
+        <div className="flex-1 px-4 py-6 sm:px-8 sm:py-12">
+          <main className="max-w-7xl mx-auto w-full">{children}</main>
         </div>
       </body>
     </html>
