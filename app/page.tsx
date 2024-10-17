@@ -8,10 +8,10 @@ export default function HomePage() {
           Welcome to Payment Overview
         </h1>
         <p className="text-base text-gray-600 mb-4 text-start">
-          This application is a task for a React/Next.js Developer Candidate. It
-          provides an overview of payments, allowing users to filter, sort, and
-          view detailed information about individual payments. Explore the
-          functionalities by viewing the payment overview page.
+          This application was developed as a task for a React/Next.js Developer
+          position. It provides an overview of payments, allowing users to
+          filter, sort, and view detailed information about individual payments.
+          Explore the functionalities on the payments overview page.
         </p>
         <p className="text-base text-gray-600 mb-8 text-start">
           For task details and requirements, visit the following link:
